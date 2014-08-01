@@ -32,9 +32,6 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Sign Up and Log In", nil);
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"Matt"] = @"Matt Merrill";
-    [testObject saveInBackground];
 }
 
 
