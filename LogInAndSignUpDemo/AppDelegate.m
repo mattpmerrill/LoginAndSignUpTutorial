@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DemoTableViewController.h"
+#import "DefaultSettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -21,7 +22,7 @@
     // Fill in with your Parse and Twitter credentials. Don't forget to add your
     // Facebook id in Info.plist:
     // ****************************************************************************
-    [Parse setApplicationId:@"Oz7MR9tsvFEIO37jWvB3dTWiRdiCV86VUH4QHU0Ec" clientKey:@"Pqe7moTHFJ2ix13hFC8EIaXqmuferL4BN7XFVToD"];
+    [Parse setApplicationId:@"Oz7MR9tsvFEIO37jWvB3dTWiRdiCV86VUH4QHU0E" clientKey:@"Pqe7moTHFJ2ix13hFC8EIaXqmuferL4BN7XFVToD"];
     [PFFacebookUtils initializeFacebook];
     //[PFTwitterUtils initializeWithConsumerKey:@"your_twitter_consumer_key" consumerSecret:@"your_twitter_consumer_secret"];
     
@@ -30,7 +31,7 @@
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[DemoTableViewController alloc] init]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[DefaultSettingsViewController alloc] init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
